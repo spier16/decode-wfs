@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "decode-wfs"
+version = "0.1.0"
+description = "Decode AEwin64 .WFS streaming files into numpy arrays"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Stephen Pierson" }]
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.urls]
+Homepage = "https://github.com/spier16/decode-wfs"
+Source = "https://github.com/spier16/decode-wfs"
+
+[project.scripts]
+decode-wfs = "decode_wfs:main"
+
+[tool.hatch.build.targets.wheel]
+include = ["decode_wfs.py"]
