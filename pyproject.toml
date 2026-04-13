@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "decode-wfs"
-version = "0.1.1"
+version = "0.1.2"
 description = "Decode AEwin64 .WFS streaming files into numpy arrays"
 readme = "README.md"
 license = { file = "LICENSE" }

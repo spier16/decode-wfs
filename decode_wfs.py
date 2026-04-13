@@ -645,8 +645,9 @@ def main() -> None:
     if len(records) > 5:
         print(f"  ... ({len(records) - 5:,} more records)")
 
-    arr = wfs.to_array(channel=args.channel)
-    print(f"\nnumpy array shape : {arr.shape}  dtype={arr.dtype}")
+    n_records = len(records)
+    n_samples = len(records[0].samples) if records else 0
+    print(f"\nnumpy array shape : ({n_records}, {n_samples})  dtype=float64")
     print("Done.")
 
 
